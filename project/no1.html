@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情 - 科技产品名称</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* 深色背景 */
+            color: #e0e0e0; /* 浅色字体 */
+            line-height: 1.6;
+        }
+
+        /* 容器 */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        /* 导航栏 */
+        .header {
+            background-color: #1e1e1e;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00e0ff; /* 科技感颜色 */
+            text-decoration: none;
+        }
+        .header nav a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: #a0a0a0;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .header nav a:hover {
+            color: #00e0ff;
+        }
+
+        /* 商品图片区 */
+        .product-image-section {
+            flex: 1;
+            min-width: 400px;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 224, 255, 0.1); /* 科技感发光效果 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .product-image-section img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 商品详情区 */
+        .product-details-section {
+            flex: 1;
+            min-width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .product-details-section h1 {
+            font-size: 2.5rem;
+            color: #00e0ff;
+            margin-bottom: 0.5rem;
+        }
+        .product-details-section .tagline {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            margin-bottom: 1rem;
+        }
+        .product-details-section .price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+        .product-details-section .price span {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            font-weight: normal;
+        }
+        .product-details-section .description {
+            color: #c0c0c0;
+            margin-bottom: 2rem;
+        }
+        .product-details-section .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+        }
+        .product-details-section .features-list li {
+            background-color: #2a2a2a;
+            padding: 0.75rem 1rem;
+            border-left: 3px solid #00e0ff;
+            margin-bottom: 0.5rem;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .purchase-button {
+            background-color: #00e0ff;
+            color: #121212;
+            padding: 1rem 2rem;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 0 10px rgba(0, 224, 255, 0.5);
+        }
+        .purchase-button:hover {
+            background-color: #00b3cc;
+            transform: translateY(-2px);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .product-image-section, .product-details-section {
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">TECH-CORP</a>
+        <nav>
+            <a href="#">首页</a>
+            <a href="#">产品列表</a>
+            <a href="#">联系我们</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="product-image-section">
+            <img src="https://via.placeholder.com/600x400?text=Product+Image" alt="科技产品图片">
+        </section>
+
+        <section class="product-details-section">
+            <h1 class="product-title">未来之眼 - 智能头戴设备</h1>
+            <p class="tagline">沉浸式虚拟现实体验，触手可及的未来。</p>
+            <p class="price">¥ **9999** <span>起</span></p>
+
+            <p class="description">
+                “未来之眼”是一款突破性的智能头戴设备，融合了最尖端的XR技术。它不仅提供无与伦比的视觉保真度和沉浸感，还通过直观的手势和眼球追踪技术，为您带来前所未有的交互体验。无论是娱乐、工作还是学习，它都将成为您探索数字世界的最佳伴侣。
+            </p>
+
+            <ul class="features-list">
+                <li>超高清OLED显示屏，每眼4K分辨率</li>
+                <li>实时手势识别，无需控制器</li>
+                <li>轻量化设计，佩戴舒适无负担</li>
+                <li>长达10小时续航，满足全天使用需求</li>
+                <li>内置AI芯片，智能处理复杂任务</li>
+            </ul>
+
+            <a href="#" class="purchase-button">立即购买</a>
+        </section>
+    </main>
+
+</body>
+</html>
