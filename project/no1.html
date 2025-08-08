@@ -129,10 +129,32 @@
             text-decoration: none;
             transition: background-color 0.3s, transform 0.3s;
             box-shadow: 0 0 10px rgba(0, 224, 255, 0.5);
+            display: block; /* 按钮独占一行 */
         }
         .purchase-button:hover {
             background-color: #00b3cc;
             transform: translateY(-2px);
+        }
+
+        /* 视频容器样式 */
+        .video-container {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 视频长宽比 */
+            background-color: #000;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 224, 255, 0.1);
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         /* 响应式设计 */
@@ -148,6 +170,7 @@
 </head>
 <body>
 
+    <!-- 导航栏 -->
     <header class="header">
         <a href="#" class="logo">TECH-CORP</a>
         <nav>
@@ -157,27 +180,40 @@
         </nav>
     </header>
 
+    <!-- 商品详情容器 -->
     <main class="container">
+        <!-- 商品图片区 -->
         <section class="product-image-section">
             <img src="https://via.placeholder.com/600x400?text=Product+Image" alt="科技产品图片">
         </section>
 
+        <!-- 商品详情区 -->
         <section class="product-details-section">
-            <h1 class="product-title">未来之眼 - 智能头戴设备</h1>
-            <p class="tagline">沉浸式虚拟现实体验，触手可及的未来。</p>
+            <h1 class="product-title">麦当劳新品</h1>
+            <p class="tagline">好吃又好玩。</p>
             <p class="price">¥ **9999** <span>起</span></p>
 
             <p class="description">
-                “未来之眼”是一款突破性的智能头戴设备，融合了最尖端的XR技术。它不仅提供无与伦比的视觉保真度和沉浸感，还通过直观的手势和眼球追踪技术，为您带来前所未有的交互体验。无论是娱乐、工作还是学习，它都将成为您探索数字世界的最佳伴侣。
+                “香辣鸡腿堡”是一款突破性的智能头戴设备，融合了最尖端的XR技术。它不仅提供无与伦比的视觉保真度和沉浸感，还通过直观的手势和眼球追踪技术，为您带来前所未有的交互体验。无论是娱乐、工作还是学习，它都将成为您探索数字世界的最佳伴侣。
             </p>
 
             <ul class="features-list">
-                <li>超高清OLED显示屏，每眼4K分辨率</li>
-                <li>实时手势识别，无需控制器</li>
+                <li>好吃</li>
+                <li>健康</li>
                 <li>轻量化设计，佩戴舒适无负担</li>
-                <li>长达10小时续航，满足全天使用需求</li>
-                <li>内置AI芯片，智能处理复杂任务</li>
+                <li>营养</li>
+                <li>美味</li>
             </ul>
+
+            <!-- 视频嵌入区 -->
+            <div class="video-container">
+                <iframe
+                    src="https://www.youtube.com/embed/8X6JJZMBurM"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
 
             <a href="#" class="purchase-button">立即购买</a>
         </section>
