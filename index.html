@@ -79,6 +79,16 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
+        /* 新增：确保链接样式不影响卡片 */
+        .product-card-link {
+            text-decoration: none; /* 移除链接下划线 */
+            color: inherit; /* 继承父元素的颜色 */
+        }
+        /* 新增：为链接内的卡片添加悬停效果 */
+        .product-card-link:hover .product-card {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
         .product-card {
             background-color: #fff;
             padding: 1.5rem;
@@ -86,10 +96,11 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        .product-card:hover {
+        /* 移除原有的悬停效果，将其移到 .product-card-link:hover 上 */
+        /* .product-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-        }
+        } */
         .product-card img {
             max-width: 100%;
             height: auto;
@@ -121,6 +132,7 @@
 </head>
 <body>
 
+    <!-- 头部导航栏 -->
     <header class="header">
         <div class="logo">企业名称</div>
         <nav>
@@ -131,25 +143,33 @@
         </nav>
     </header>
 
+    <!-- 主体内容区 -->
     <main class="container">
+        <!-- 英雄区 -->
         <section class="hero">
             <h1>欢迎来到我们的企业网站</h1>
             <p>我们提供创新和高质量的产品与服务。</p>
         </section>
 
+        <!-- 商品展示区 -->
         <section class="products-section">
             <h2>我们的特色产品</h2>
             <div class="products-grid">
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300" alt="产品1图片">
-                    <h3>产品名称一</h3>
-                    <p>这是关于产品一的简短描述，旨在突出其核心功能和优势。它可以是任何您想展示的信息。</p>
-                </div>
+                <!-- 产品卡片1 (已修改为链接) -->
+                <a href="https://rmttesthtml.vercel.app/project/no1.html" class="product-card-link">
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300" alt="产品1图片">
+                        <h3>产品名称一</h3>
+                        <p>这是关于产品一的简短描述，旨在突出其核心功能和优势。它可以是任何您想展示的信息。</p>
+                    </div>
+                </a>
+                <!-- 产品卡片2 -->
                 <div class="product-card">
                     <img src="https://via.placeholder.com/300" alt="产品2图片">
                     <h3>产品名称二</h3>
                     <p>这是关于产品二的简短描述，说明了它如何解决客户痛点。例如，它拥有独特的创新技术。</p>
                 </div>
+                <!-- 产品卡片3 -->
                 <div class="product-card">
                     <img src="https://via.placeholder.com/300" alt="产品3图片">
                     <h3>产品名称三</h3>
@@ -159,6 +179,7 @@
         </section>
     </main>
 
+    <!-- 页脚 -->
     <footer class="footer">
         <p>&copy; 2025 企业名称. All Rights Reserved.</p>
     </footer>
