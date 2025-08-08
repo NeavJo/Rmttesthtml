@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企业示例网站</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* 头部导航 */
+        .header {
+            background-color: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0056b3;
+        }
+        .header nav a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .header nav a:hover {
+            color: #0056b3;
+        }
+
+        /* 主体内容 */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        /* 英雄区（主视觉区） */
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background-color: #e9ecef;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            color: #212529;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: #6c757d;
+        }
+
+        /* 商品展示区 */
+        .products-section {
+            text-align: center;
+        }
+        .products-section h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .product-card {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+            color: #0056b3;
+        }
+        .product-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #343a40;
+            color: #fff;
+            margin-top: 2rem;
+        }
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">企业名称</div>
+        <nav>
+            <a href="#">首页</a>
+            <a href="#">关于我们</a>
+            <a href="#">产品</a>
+            <a href="#">联系我们</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>欢迎来到我们的企业网站</h1>
+            <p>我们提供创新和高质量的产品与服务。</p>
+        </section>
+
+        <section class="products-section">
+            <h2>我们的特色产品</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300" alt="产品1图片">
+                    <h3>产品名称一</h3>
+                    <p>这是关于产品一的简短描述，旨在突出其核心功能和优势。它可以是任何您想展示的信息。</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300" alt="产品2图片">
+                    <h3>产品名称二</h3>
+                    <p>这是关于产品二的简短描述，说明了它如何解决客户痛点。例如，它拥有独特的创新技术。</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300" alt="产品3图片">
+                    <h3>产品名称三</h3>
+                    <p>这是关于产品三的简短描述，介绍了它的应用场景和价值。它能为您的业务带来巨大提升。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 企业名称. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
